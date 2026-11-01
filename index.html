@@ -9,175 +9,130 @@
     <h1 id="productTitle"></h1>
 
     <script>
-        // 1. Product title inside h1
+// 1. 
           const titleH1 = document.createElement("h1");
           titleH1.textContent = product.title;
 
-           // 2. Product ID and title inside h2
+// 2. 
           const idTitleH2 = document.createElement("h2");
           idTitleH2.textContent =`ID: ${product.id} - ${product.title}`;
 
-          //3.
+//3.
           data.products.forEach((product) => {
-  api.innerHTML += `
-    <p>${product.title.slice(0, 30)}</p>
-  `;
-});
+          api.innerHTML += `<p>${product.title.slice(0, 30)}</p>`;});
 
-    //4.
-    data.products.forEach((product) => {
-  api.innerHTML += `
-    <p>${product.description.slice(0, 100)}</p>
-  `;
-});
+//4.
+         data.products.forEach((product) => {
+          api.innerHTML += `<p>${product.description.slice(0, 100)}</p>`;});
 
 //5.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <div>
-      <img src="${product.thumbnail}">
-    </div>
-  `;
-});
+         data.products.forEach((product) => {
+         api.innerHTML += `<div><img src="${product.thumbnail}"></div>`;});
 
 //6.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <div>
-      <h2>${product.title}</h2>
-      <p>${product.description}</p>
-      <img src="${product.thumbnail}">
-    </div>
-  `;
-});
+         data.products.forEach((product) => {
+         api.innerHTML += `<div><h2>${product.title}</h2>
+         <p>${product.description}</p>
+         <img src="${product.thumbnail}">
+        </div>`;});
 
 //7.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <p>${product.price}</p>
-  `;
-});
+        data.products.forEach((product) => {
+        api.innerHTML += `
+        <p>${product.price}</p>`;});
 
 //8.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <h3>${product.category}</h3>
-  `;
-});
+        data.products.forEach((product) => {
+        api.innerHTML += `<h3>${product.category}</h3> `;});
 
 //9.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <h2>${product.title.toUpperCase()}</h2>
-  `;
-});
+        data.products.forEach((product) => {
+        api.innerHTML += `
+        <h2>${product.title.toUpperCase()}</h2>`;});
    
 //10.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <p>
-      ${product.title} - ${product.title.length} characters
-    </p>
-  `;
-});
+        data.products.forEach((product) => {
+        api.innerHTML += `
+        <p>
+        ${product.title} - ${product.title.length} characters
+        </p>`;});
 
 //11.
-data.products.slice(0, 5).forEach((product) => {
-  api.innerHTML += `
-    <h2>${product.title}</h2>
-  `;
-});
+       data.products.slice(0, 5).forEach((product) => {
+       api.innerHTML += `
+       <h2>${product.title}</h2>`;});
 
 //12.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <p>
+       data.products.forEach((product) => {
+       api.innerHTML += `
+      <p>
       ID: ${product.id}<br>
       Title: ${product.title}<br>
       Price: $${product.price}
-    </p>
-  `;
-});
+    </p>`;});
 
 //13.
-data.products.forEach((product) => {
-  api.innerHTML += `
+     data.products.forEach((product) => {
+     api.innerHTML += `
     <img 
       src="${product.thumbnail}" 
-      width="200px"
-    >
-  `;
-});
+      width="200px" >`;});
 
 //14.
-data.products.forEach((product) => {
-  api.innerHTML += `
-    <div class="card">
+      data.products.forEach((product) => {
+      api.innerHTML += `
+      <div class="card">
       <h2>${product.title}</h2>
-    </div>
-  `;
-});
+      </div>`;});
 
 //15.
-data.products.forEach((product) => {
-  api.innerHTML += `
+      data.products.forEach((product) => {
+      api.innerHTML += `
     <h2>${product.title}</h2>
-    <p>${product.description.slice(0, 50)}...</p>
-  `;
-});
+    <p>${product.description.slice(0, 50)}...</p>`;});
 
 //16.
-data.products.forEach((product) => {
+      data.products.forEach((product) => {
 
-  console.log(product.title);
+      console.log(product.title);
 
-  api.innerHTML += `
-    <h2>${product.title}</h2>
-  `;
-});
+      api.innerHTML += `
+    <h2>${product.title}</h2>`;});
 
 //17.
-data.products.forEach((product) => {
-  api.innerHTML += `
+      data.products.forEach((product) => {
+      api.innerHTML += `
     <div>
       <h2>${product.title}</h2>
       <p>${product.category}</p>
-    </div>
-  `;
-});
+    </div>`;});
 
 //18.
-data.products.forEach((product) => {
-  // Product code
-});
+     data.products.forEach((product) => {
+      });
 
-api.innerHTML += `
-  <h2>API Data Successfully Loaded!</h2>
-`;
+      api.innerHTML += `
+     <h2>API Data Successfully Loaded!</h2>`;
 
 //19.
-const api = document.querySelector(".api");
+      const api = document.querySelector(".api");
 
-api.innerHTML = "<h2>Loading...</h2>";
+      api.innerHTML = "<h2>Loading...</h2>";
 
-fetch("https://dummyjson.com/products")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  });
+      fetch("https://dummyjson.com/products")
+      .then((response) => response.json())
+      .then((data) => {
+      console.log(data);});
 
 //20.
-fetch("https://dummyjson.com/products")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  })
+      fetch("https://dummyjson.com/products")
+     .then((response) => response.json())
+     .then((data) => {
+    console.log(data);})
   .finally(() => {
     api.innerHTML += `
-      <h2>API request completed</h2>
-    `;
-  });
-  
+      <h2>API request completed</h2>`;});
+
 
     </script>
     
